@@ -9,6 +9,8 @@ require 'solidus_dev_support/rspec/coverage'
 # Create the dummy app if it's still missing.
 dummy_env = "#{__dir__}/dummy/config/environment.rb"
 system 'bin/rake extension:test_app' unless File.exist? dummy_env
+system "cp #{__dir__}/config/dummy_initializer.rb #{__dir__}/dummy/config/initializers/dummy_initializer.rb"
+
 require dummy_env
 
 # Requires factories and other useful helpers defined in spree_core.

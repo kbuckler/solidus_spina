@@ -1,6 +1,6 @@
 module SolidusSpina
   module Parts
-    class SolidusRelatedProduct < Spina::Parts::Base
+    class SolidusRelatedProduct < ::Spina::Parts::Base
       attr_json :spree_relation_id, :integer
 
       def content

@@ -1,6 +1,6 @@
 module SolidusSpina
   module Parts
-    class SolidusProductReadonly < Spina::Parts::Base
+    class SolidusProductReadonly < ::Spina::Parts::Base
       attr_json :spree_product_id, :integer
 
       def content
