@@ -61,7 +61,7 @@ theme.parts = [
 
 In addition to referencing arbitrary Solidus products, you may also create complete Spina pages for Solidus products in your store. This allows for deeply structured content related to your Solidus product catalog. This is a one-to-one reference between a product and a structured content page in Spina.
 
-In your Spina them, this is accomplished by adding a new resource and view template to your theme.
+In your Spina theme, this is accomplished by adding a new resource and view template to your theme. By default, your theme file is located at `config/initializers/default/theme.rb`.
 
 The resource:
 
@@ -95,15 +95,18 @@ theme.view_templates = [
 
 Of course, you may use any Spina parts that you've registered in your theme.
 
-After adding this to your theme file, (by default: `config/initializers/default/theme.rb`) you'll need to save your Spina preferences once in the admin panel.
+After adding this to your theme file, you'll need to save your Spina preferences once in the admin panel.
 
 You'll find a "Solidus Products" resource in the Spina admin area. Pages created here will be linked to Solidus products, with the view template defined above. See "Solidus View Helpers" for instructions on referencing these pages in your Solidus views.
 
 #### Solidus Related Products
 
-Furthermore, if you are using Solidus Related Products, this gem includes `SolidusSpina::Parts::SolidusRelatedProductsRepeater` which allows you to enumerate a product's related products similarly to a `Spina::Parts::Repeater`.
+Furthermore, if you are using Solidus Related Products, this gem includes a `SolidusRelatedProductsRepeater` part which allows you to enumerate a product's related products similarly to a `Spina::Parts::Repeater`.
 
-You'll need to register two parts in your theme: a `SolidusSpina::Parts::SolidusRelatedProduct` and a `SolidusSpina::Parts::SolidusRelatedProductsRepeater`.
+You'll need to register the following parts in your theme:
+
+- `SolidusSpina::Parts::SolidusRelatedProduct`
+- `SolidusSpina::Parts::SolidusRelatedProductsRepeater`
 
 For example:
 
@@ -112,7 +115,7 @@ theme.parts = [
   {
     # ...
   },
-      {
+  {
     name: 'solidus_related_product',
     title: 'Related Product',
     part_type: 'SolidusSpina::Parts::SolidusRelatedProduct'
