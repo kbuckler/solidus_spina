@@ -21,13 +21,27 @@ bin/rails generate solidus_spina:install
 
 ## Usage
 
-This gem integrates the [SpinaCMS](https://github.com/SpinaCMS/Spina) content management system with the [Solidus](https://github.com/solidusio/solidus) e-commerce platform.
+This gem integrates the [SpinaCMS](https://github.com/SpinaCMS/Spina) content management system with the [Solidus](https://github.com/solidusio/solidus) e-commerce platform. Included in the project are several Spina parts that you can use in your [Spina view templates](https://www.spinacms.com/guide/themes/view-templates), Solidus view helpers to assist in rendering Spina content, and a custom Spina page that can directly link Spina content to your Solidus product pages.
 
-### Solidus Products
+### Parts
 
-### Solidus Related Products
+todo
+
+#### Solidus Products
+
+todo
+
+#### Solidus Related Products
+
+todo
 
 ### Spina Resource
+
+todo
+
+### Solidus View Helpers
+
+todo
 
 ## Development
 
