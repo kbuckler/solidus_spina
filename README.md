@@ -23,21 +23,81 @@ bin/rails generate solidus_spina:install
 
 This gem integrates the [SpinaCMS](https://github.com/SpinaCMS/Spina) content management system with the [Solidus](https://github.com/solidusio/solidus) e-commerce platform. Included in the project are several Spina parts that you can use in your [Spina view templates](https://www.spinacms.com/guide/themes/view-templates), Solidus view helpers to assist in rendering Spina content, and a custom Spina page that can directly link Spina content to your Solidus product pages.
 
-### Parts
-
-todo
+### Modifying your Spina theme
 
 #### Solidus Products
 
-todo
+If you would like to simply reference arbitrary Solidus products from within a Spina page, you'll just need to register a `SolidusSpina::Parts::SolidusProduct` part in your theme. For example:
+
+```ruby
+theme.parts = [
+  {
+    name: 'product',
+    title: 'Product',
+    part_type: 'SolidusSpina::Parts::SolidusProduct'
+  }
+]
+```
+
+You may of course use the Solidus product part within Spina repeaters, for example a list of featured products may be represented as:
+
+```ruby
+theme.parts = [
+    {
+      name: 'featured_products',
+      title: 'Featured Products',
+      parts: %w[product],
+      part_type: 'Spina::Parts::Repeater'
+    },
+    {
+      name: 'product',
+      title: 'Product',
+      part_type: 'SolidusSpina::Parts::SolidusProduct'
+    }
+]
+```
+
+#### Spina Product Pages
+
+In addition to referencing arbitrary Solidus products, you may also create complete Spina pages for Solidus products in your store. This allows for deeply structured content related to your Solidus product catalog. This is a one-to-one reference between a product and a structured content page in Spina.
+
+In your Spina them, this is accomplished by adding a new resource and view template to your theme.
+
+```ruby
+theme.resources = [
+  {
+    // ...
+  },
+  {
+    name: 'solidus_products',
+    label: 'Solidus Products',
+    view_template: 'solidus_product'
+  }
+]
+```
+
+```ruby
+theme.view_templates = [
+  {
+    // ...
+  },
+  {
+    name: 'solidus_product',
+    title: 'Solidus Product',
+    parts: %w[ additional_text customer_quotes ]
+  }
+]
+```
+
+Of course, you may use any Spina parts that you've registered in your theme.
+
+After adding this to your theme file, (by default: `config/initializers/default/theme.rb`) you'll need to save your Spina preferences once in the admin panel.
+
+You'll find a "Solidus Products" resource in the Spina admin area. Pages created here will be linked to Solidus products, with the view template defined above. See "Solidus View Helpers" for instructions on referencing these pages in your Solidus views.
 
 #### Solidus Related Products
 
-todo
-
-### Spina Resource
-
-todo
+Furthermore, if you are using Solidus Related Products, this gem
 
 ### Solidus View Helpers
 
