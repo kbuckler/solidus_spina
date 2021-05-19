@@ -21,7 +21,13 @@ bin/rails generate solidus_spina:install
 
 ## Usage
 
-<!-- Explain how to use your extension once it's been installed. -->
+This gem integrates the [SpinaCMS](https://github.com/SpinaCMS/Spina) content management system with the [Solidus](https://github.com/solidusio/solidus) e-commerce platform.
+
+### Solidus Products
+
+### Solidus Related Products
+
+### Spina Resource
 
 ## Development
 
@@ -88,4 +94,4 @@ Please refer to the dedicated [page](https://github.com/solidusio/solidus/wiki/H
 
 ## License
 
-Copyright (c) 2021 [name of extension author], released under the New BSD License.
+Copyright (c) 2021 Kenny Buckler, released under the New BSD License.
