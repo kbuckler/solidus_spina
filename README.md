@@ -63,10 +63,12 @@ In addition to referencing arbitrary Solidus products, you may also create compl
 
 In your Spina them, this is accomplished by adding a new resource and view template to your theme.
 
+The resource:
+
 ```ruby
 theme.resources = [
   {
-    // ...
+    # ...
   },
   {
     name: 'solidus_products',
@@ -76,10 +78,12 @@ theme.resources = [
 ]
 ```
 
+The product view template:
+
 ```ruby
 theme.view_templates = [
   {
-    // ...
+    # ...
   },
   {
     name: 'solidus_product',
@@ -97,7 +101,31 @@ You'll find a "Solidus Products" resource in the Spina admin area. Pages created
 
 #### Solidus Related Products
 
-Furthermore, if you are using Solidus Related Products, this gem
+Furthermore, if you are using Solidus Related Products, this gem includes `SolidusSpina::Parts::SolidusRelatedProductsRepeater` which allows you to enumerate a product's related products similarly to a `Spina::Parts::Repeater`.
+
+You'll need to register two parts in your theme: a `SolidusSpina::Parts::SolidusRelatedProduct` and a `SolidusSpina::Parts::SolidusRelatedProductsRepeater`.
+
+For example:
+
+```ruby
+theme.parts = [
+  {
+    # ...
+  },
+      {
+    name: 'solidus_related_product',
+    title: 'Related Product',
+    part_type: 'SolidusSpina::Parts::SolidusRelatedProduct'
+  },
+  {
+    name: 'related_products',
+    title: 'Related Products',
+    parts: %w[solidus_related_product text image],
+    part_type: 'SolidusSpina::Parts::SolidusRelatedProductsRepeater'
+  }
+```
+
+Internally, `SolidusSpina::Parts::SolidusRelatedProduct` references a `Spree::Relation`.
 
 ### Solidus View Helpers
 
