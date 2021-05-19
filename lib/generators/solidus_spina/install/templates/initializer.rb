@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 SolidusSpina.configure do |config|
-  # TODO: Remember to change this with the actual preferences you have implemented!
-  # config.sample_preference = 'sample_value'
+
 end
+
+Spina::Part.register(Spina::Parts::SolidusRelatedProduct)
+Spina::Part.register(Spina::Parts::SolidusProductReadonly)
+Spina::Part.register(Spina::Parts::SolidusRelatedProductsRepeater)

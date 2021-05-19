@@ -1,0 +1,12 @@
+<% 
+  relations = @page.solidus_product.relations.sort_by(&:relation_type)
+  options_for_select = relations.flatten.map do |r| 
+    [ "#{r.relation_type.name} - #{r.related_to.name}", r.id] 
+  end
+%>
+<div class="page-form-label"><%= f.object.title %></div>
+<div class="page-form-control">
+  <div class="select-dropdown">
+    <%= f.select :spree_relation_id, [["(None) ", nil]] + options_for_select %>
+  </div>
+</div>

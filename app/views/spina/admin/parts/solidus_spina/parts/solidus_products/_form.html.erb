@@ -1,0 +1,6 @@
+<div class="page-form-label"><%= f.object.title %></div>
+<div class="page-form-control">
+  <div class="select-dropdown">
+    <%= f.select :spree_product_id, [["(None) ", nil]] + Spree::Product.all.order("name ASC").pluck(:name, :id) %>
+  </div>
+</div>

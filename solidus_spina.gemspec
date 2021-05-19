@@ -8,14 +8,13 @@ Gem::Specification.new do |spec|
   spec.authors = ['Kenny Buckler']
   spec.email = 'kbuckler@gmail.com'
 
-  spec.summary = 'TODO: Write a short summary, because RubyGems requires one.'
-  spec.description = 'TODO: Write a longer description or delete this line.'
-  spec.homepage = 'https://github.com/solidusio-contrib/solidus_spina#readme'
+  spec.summary = 'Spina CMS integration for your Solidus store.'
+  spec.homepage = 'https://github.com/kbuckler/solidus_spina#readme'
   spec.license = 'BSD-3-Clause'
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://github.com/solidusio-contrib/solidus_spina'
-  spec.metadata['changelog_uri'] = 'https://github.com/solidusio-contrib/solidus_spina/blob/master/CHANGELOG.md'
+  spec.metadata['source_code_uri'] = 'https://github.com/kbuckler/solidus_spina'
+  spec.metadata['changelog_uri'] = 'https://github.com/kbuckler/solidus_spina/blob/master/CHANGELOG.md'
 
   spec.required_ruby_version = Gem::Requirement.new('~> 2.5')
 
