@@ -39,21 +39,21 @@ theme.parts = [
 ]
 ```
 
-You may of course use the Solidus product part within Spina repeaters, for example a list of featured products may be represented as:
+You may of course use a Solidus product part within Spina repeaters. For example, a list of featured products could be represented as follows:
 
 ```ruby
 theme.parts = [
-    {
-      name: 'featured_products',
-      title: 'Featured Products',
-      parts: %w[product],
-      part_type: 'Spina::Parts::Repeater'
-    },
-    {
-      name: 'product',
-      title: 'Product',
-      part_type: 'SolidusSpina::Parts::SolidusProduct'
-    }
+  {
+    name: 'featured_products',
+    title: 'Featured Products',
+    parts: %w[product],
+    part_type: 'Spina::Parts::Repeater'
+  },
+  {
+    name: 'product',
+    title: 'Product',
+    part_type: 'SolidusSpina::Parts::SolidusProduct'
+  }
 ]
 ```
 
@@ -71,7 +71,7 @@ theme.resources = [
     # ...
   },
   {
-    name: 'solidus_products',
+    name: SolidusSpina::SOLIDUS_RESOURCE_NAME,
     label: 'Solidus Products',
     view_template: 'solidus_product'
   }
