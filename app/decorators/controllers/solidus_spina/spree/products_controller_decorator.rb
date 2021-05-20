@@ -3,7 +3,7 @@ module SolidusSpina
     module ProductsControllerDecorator
       def self.prepended(base)
         base.append_before_action :load_spina_content, only: :show
-        base.helper SolidusSpina::SolidusProductPageHelper
+        base.helper SolidusSpina::SolidusHelper
       end
 
       def load_spina_content

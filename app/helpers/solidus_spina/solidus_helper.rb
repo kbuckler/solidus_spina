@@ -1,5 +1,5 @@
 module SolidusSpina
-  module SolidusProductPageHelper
+  module SolidusHelper
     def spina_content(part_name = nil)
       ::Spina::Current.page.content(part_name)
     end
