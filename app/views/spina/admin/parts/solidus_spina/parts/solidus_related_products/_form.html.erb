@@ -1,5 +1,5 @@
 <% 
-  relations = @page.solidus_product.relations.sort_by(&:relation_type)
+  relations = @page.spree_product.relations.sort_by(&:relation_type)
   options_for_select = relations.flatten.map do |r| 
     [ "#{r.relation_type.name} - #{r.related_to.name}", r.id] 
   end
