@@ -10,9 +10,11 @@ module SolidusSpina
       ::Spina::Current.page.has_content?(part_name)
     end
 
-    def spina_repeater(part)
+    def spina_repeater(part, limit: nil)
       part = ::Spina::Current.page.find_part(part)&.content unless part.is_a? Array
-      part&.each do |repeater_content|
+      part&.each_with_index do |repeater_content, index|
+        break if limit && index == limit
+
         repeater_content.view_context = self
         yield(repeater_content)
       end

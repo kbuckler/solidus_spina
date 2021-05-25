@@ -33,5 +33,4 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'spina', ['>= 2.0.0', '< 3']
 
   spec.add_development_dependency 'solidus_dev_support', '~> 2.5'
-  spec.add_development_dependency 'spina'
 end
