@@ -9,7 +9,7 @@ module SolidusSpina
       end
 
       def solidus_page?
-        spree_product_id.present?
+        spree_product.present?
       end
 
       def initialize_solidus_page
