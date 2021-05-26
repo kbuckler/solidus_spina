@@ -6,7 +6,7 @@ module SolidusSpina
       ::Spina::Current.page.content(part_name)
     end
 
-    def has_spina_content?(part_name)
+    def spina_content?(part_name)
       return false unless ::Spina::Current.page
 
       ::Spina::Current.page.has_content?(part_name)
