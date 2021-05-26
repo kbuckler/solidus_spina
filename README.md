@@ -1,6 +1,6 @@
 # Solidus Spina
 
-[![CircleCI](https://circleci.com/gh/solidusio-contrib/solidus_spina.svg?style=shield)](https://circleci.com/gh/solidusio-contrib/solidus_spina)
+[![CircleCI](https://circleci.com/gh/kbuckler/solidus_spina.svg?style=shield)](https://circleci.com/gh/kbuckler/solidus_spina)
 [![codecov](https://codecov.io/gh/solidusio-contrib/solidus_spina/branch/master/graph/badge.svg)](https://codecov.io/gh/solidusio-contrib/solidus_spina)
 
 <!-- Explain what your extension does. -->
