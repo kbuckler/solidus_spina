@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SolidusSpina
   module Admin
     module SolidusHelper

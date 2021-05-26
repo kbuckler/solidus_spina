@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SolidusSpina
   module SolidusHelper
     def spina_content(part_name = nil)

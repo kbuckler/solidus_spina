@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 if Rails.env.test?
   Mobility.configure do
     plugins do
