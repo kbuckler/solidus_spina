@@ -3,9 +3,9 @@
 [![CircleCI](https://circleci.com/gh/kbuckler/solidus_spina.svg?style=shield)](https://circleci.com/gh/kbuckler/solidus_spina)
 [![codecov](https://codecov.io/gh/solidusio-contrib/solidus_spina/branch/master/graph/badge.svg)](https://codecov.io/gh/solidusio-contrib/solidus_spina)
 
-<!-- Explain what your extension does. -->
-
 ## Installation
+
+:warning: **Spina depends on PostgresSQL**
 
 Add solidus_spina to your Gemfile:
 
