@@ -6,7 +6,7 @@ FactoryBot.define do
   end
 
   factory :spina_account, class: 'Spina::Account' do
-    theme { ::Spina::Theme.find_by_name('default') }
+    theme { ::Spina::Theme.find_by_name('default') } # # rubocop:disable Rails/DynamicFindBy
   end
   factory :spina_resource, class: 'Spina::Resource' do
     name { "Spina Resource" }
