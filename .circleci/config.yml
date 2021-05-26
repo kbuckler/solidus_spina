@@ -12,10 +12,6 @@ jobs:
     executor: solidusio_extensions/postgres
     steps:
       - solidusio_extensions/run-tests
-  run-specs-with-mysql:
-    executor: solidusio_extensions/mysql
-    steps:
-      - solidusio_extensions/run-tests
   lint-code:
     executor: solidusio_extensions/sqlite-memory
     steps:
@@ -25,7 +21,6 @@ workflows:
   "Run specs on supported Solidus versions":
     jobs:
       - run-specs-with-postgres
-      - run-specs-with-mysql
       - lint-code
 
   "Weekly run specs against master":
@@ -38,4 +33,3 @@ workflows:
                 - master
     jobs:
       - run-specs-with-postgres
-      - run-specs-with-mysql
