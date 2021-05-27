@@ -8,7 +8,7 @@
             <%= f.select :spree_product_id, options_for_spree_product_select %>
           </div>
         <% else %>
-          <%= @page.solidus_product.name %>
+          <%= @page.spree_product.name %>
         <% end %>
       </div>
     </div>

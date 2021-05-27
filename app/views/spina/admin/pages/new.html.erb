@@ -1,0 +1,7 @@
+<%= render(Spina::UserInterface::ModalComponent.new) do %>
+  <% if @page.solidus_page? %>
+    <%= render 'new_page_form_solidus' %>
+  <% else %>
+    <%= render 'new_page_form' %>
+  <% end %>
+<% end %>

@@ -4,7 +4,7 @@ module SolidusSpina
   module Spina
     module AdminPagesControllerDecorator
       def self.prepended(base)
-        base.append_before_action :set_solidus_tabs, only: %i[new create edit update], if: :solidus_page?
+        base.before_action :set_solidus_tabs, only: %i[new create edit update], if: :solidus_page?
         base.helper SolidusSpina::Admin::SolidusHelper
       end
 
