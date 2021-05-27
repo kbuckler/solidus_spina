@@ -12,7 +12,7 @@ FactoryBot.define do
     name { "Spina Resource" }
     view_template { "view_template" }
     factory :spina_resource_solidus do
-      name { SolidusSpina::SPINA_RESOURCE_NAME }
+      name { SolidusSpina.config.spina_resource_name }
     end
   end
   factory :spina_page, class: 'Spina::Page' do

@@ -19,7 +19,7 @@ module SolidusSpina
         spina_resource = ::Spina::Resource.find_by(id: params[:resource_id])
 
         (params[:action] == 'new') &&
-          (spina_resource&.name == SolidusSpina::SPINA_RESOURCE_NAME)
+          (spina_resource&.name == SolidusSpina.config.spina_resource_name)
       end
     end
 

@@ -13,6 +13,11 @@ Mobility.configure do
   end
 end
 
+SolidusSpina.configure do |config|
+  config.spina_resource_name = 'solidus_products'
+  config.spina_view_template_name = 'solidus_product'
+end
+
 ::Spina::Theme.register do |theme|
   theme.name = 'default'
   theme.title = 'Test Theme'

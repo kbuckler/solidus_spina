@@ -2,9 +2,7 @@
 
 module SolidusSpina
   class Configuration
-    # Define here the settings for this extension, e.g.:
-    #
-    # attr_accessor :my_setting
+    attr_accessor :spina_resource_name, :spina_view_template_name
   end
 
   class << self
