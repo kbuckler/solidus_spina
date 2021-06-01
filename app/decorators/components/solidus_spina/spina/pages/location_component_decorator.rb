@@ -10,9 +10,11 @@ module SolidusSpina
 
         def resources
           [main_collection_option] + resource_scope.map do |resource|
-            [resource.label, resource.id, { data: {
-              parent_pages_url:  helpers.spina.admin_parent_pages_path(resource_id: resource.id)
-            } }]
+            [resource.label, resource.id, {
+              data: {
+                parent_pages_url: helpers.spina.admin_parent_pages_path(resource_id: resource.id)
+              }
+            }]
           end
         end
       end
