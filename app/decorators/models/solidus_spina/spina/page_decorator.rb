@@ -4,7 +4,7 @@ module SolidusSpina
   module Spina
     module PageDecorator
       def self.prepended(base)
-        base.belongs_to :spree_product, class_name: "Spree::Product"
+        base.belongs_to :spree_product, class_name: "Spree::Product", optional: true
         base.validates :spree_product_id, uniqueness: true, allow_nil: true, if: :solidus_page?
         base.before_validation :initialize_solidus_page, if: :solidus_page?, on: :create
         base.scope :solidus, -> { where.not(spree_product_id: nil) }
