@@ -11,7 +11,7 @@ module SolidusSpina
       end
 
       def solidus_page?
-        spree_product_id.present? || (view_template == SolidusSpina.config.view_template_name)
+        spree_product_id.present? || (view_template == SolidusSpina.config.spina_view_template_name)
       end
 
       def initialize_solidus_page
