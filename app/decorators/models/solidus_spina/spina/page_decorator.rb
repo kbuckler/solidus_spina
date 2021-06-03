@@ -5,13 +5,13 @@ module SolidusSpina
     module PageDecorator
       def self.prepended(base)
         base.belongs_to :spree_product, class_name: "Spree::Product", optional: true
-        base.validates :spree_product_id, uniqueness: true, allow_nil: true, if: :solidus_page?
+        base.validates :spree_product, presence: true, uniqueness: true, if: :solidus_page?
         base.before_validation :initialize_solidus_page, if: :solidus_page?, on: :create
         base.scope :solidus, -> { where.not(spree_product_id: nil) }
       end
 
       def solidus_page?
-        spree_product_id.present? || (view_template == 'solidus_product')
+        spree_product_id.present? || (view_template == SolidusSpina.config.view_template_name)
       end
 
       def initialize_solidus_page
