@@ -20,7 +20,9 @@ module SolidusSpina
           end
         end
       end
+   
       ::Spina::Pages::LocationComponent.prepend LocationComponentDecorator
+   
     end
   end
 end
