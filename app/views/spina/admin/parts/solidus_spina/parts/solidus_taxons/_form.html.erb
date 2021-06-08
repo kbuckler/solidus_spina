@@ -1,0 +1,6 @@
+<div class="page-form-label"><%= f.object.title %></div>
+<div class="page-form-control">
+  <div class="select-dropdown">
+    <%= f.select :spree_taxon_id, [["(None) ", nil]] + Spree::Taxon.all.order("name ASC").map{ |t| [ t.pretty_name, t.id ] }.sort_by(&:first) %>
+  </div>
+</div>
