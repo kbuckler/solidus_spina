@@ -5,7 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 branch = ENV.fetch('SOLIDUS_BRANCH', 'master')
 gem 'solidus', github: 'solidusio/solidus', branch: branch
-gem 'spina', github: 'SpinaCMS/Spina', branch: branch
+gem 'spina', github: 'SpinaCMS/Spina', branch: 'master'
 
 # Needed to help Bundler figure out how to resolve dependencies,
 # otherwise it takes forever to resolve them.
